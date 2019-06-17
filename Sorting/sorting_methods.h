@@ -1,0 +1,14 @@
+void copy(const float *A, float *B, const size_t n);
+void build_problem_instance(float *A, const size_t n, const size_t d);
+void build_problem_instance_prob(float *A, const size_t n, const size_t d);
+void swap(float *A, const size_t index1, const size_t index2);
+void insertion_sort(float * A, const size_t n);
+void quick_sort(float *A, const size_t l, const size_t r);
+size_t partition(float *A, size_t i, size_t j, size_t p);
+void counting_sort(float *A, const size_t k, const size_t n);
+void counting_sort_radix(float *A, const size_t k, const size_t n, const size_t exp);
+void radix_sort(float *A, const size_t n);
+void bucket_sort(float *A, const size_t n);
+float select_sort(float *A, const size_t i, const size_t l, const size_t r);
+size_t select_pivot(float* A, const size_t begin, const size_t end);
+void quick_sort_best(float * A, int l, const int r);
