@@ -122,7 +122,7 @@ void normal_case(float **M, const size_t n){
   // perform insertion sort on the array used by bucket sort (for correctness)
   insertion_sort(M[8],n);
 
-  if (is_same(M[0],M[1],n)&&(is_same(M[0],M[2],n))&&(is_same(M[0],M[3],n))&&(is_same(M[4],M[8],n))&&(M[0][k]==val))
+  if (is_same(M[0],M[1],n)&&(is_same(M[0],M[2],n))&&(is_same(M[0],M[3],n))&&(is_same(M[4],M[8],n))&&(M[0][k-1]==val))
     printf("Correct\n");
   else
     printf("Wrong\n");
@@ -230,7 +230,7 @@ int main(int argc, char *argv[]) {
   }
 
 
-  const size_t d = n;
+  const size_t d = 100000;
 
   build_problem_instance(M[0], n, d);
   build_problem_instance_prob(M[4], n, 1);
@@ -244,11 +244,11 @@ int main(int argc, char *argv[]) {
   copy(M[4], M[8], n);
 
   normal_case(M,n);
-  //printf("\n");
-  //worst_case_IQ(M,n);
-  //printf("\n");
-  //best_case_IQ(M, n);
-  //printf("\n");
+  printf("\n");
+  worst_case_IQ(M,n);
+  printf("\n");
+  best_case_IQ(M, n);
+  printf("\n");
 
   for (size_t i = 0; i < 9; i++) {
     free(M[i]);
